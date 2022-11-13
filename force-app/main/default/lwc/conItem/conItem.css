@@ -1,0 +1,28 @@
+.contact {
+    border: 1px solid lightgray;
+    padding: 0.5rem;
+    width:auto;
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s ease;
+}
+
+.inactive {
+    background-color: rgb(255, 133, 84);
+}
+
+.inactive:hover {
+    background-color: rgb(255, 233, 91);
+    border-radius: 16px;
+}
+
+.active {
+    background-color: rgb(112, 224, 112);
+}
+
+.active:hover {
+    background-color: aquamarine;
+    border-radius: 16px;
+}

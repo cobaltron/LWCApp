@@ -1,0 +1,35 @@
+<template>
+    <lightning-layout class="slds-align_absolute-center slds-text-align_center container" multiple-rows="true">
+
+        <lightning-layout-item size="12">
+            
+            <div class="slds-text-heading_large slds-m-vertical_large">
+                <lightning-icon icon-name="utility:search" alternative-text="Search" title="Search"></lightning-icon>
+                
+                Contact Widget</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" large-device-size={largePageSize}
+            medium-device-size="10" class="slds-m-top_large">
+            <lightning-layout>
+                <lightning-layout-item size="12">
+                    <lightning-input type="text" label={input} variant="label-hidden"
+                        placeholder="Search Contact Name" onchange={changeHandler}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+        
+
+        <lightning-layout-item size="12">
+            <div class="slds-m-top_large slds-text-heading_label">Search Results</div>
+            <template if:true={showResultmsg}>
+                <div class="slds-m-vertical_medium">
+                    No results to show.
+                </div>
+            </template>
+            <template for:each={filterconItems} for:item="con">
+                <c-con-item key={con.conId} con-name={con.conName} con-id={con.conId} active={con.active} ondelete={deleteConHandler} onupdate={updateConHandler}></c-con-item>
+            </template>
+        </lightning-layout-item>
+
+        </lightning-layout>
+  </template>

@@ -1,0 +1,14 @@
+<template>
+
+    <div class={containerClass}>
+        <span class="slds-text-heading_small">{conName}</span>
+        <lightning-button-icon variant="border-filled" icon-name={buttonIcon} class="slds-p-horizontal_medium" onclick={updateHandler}
+            title="Update Contact">
+        </lightning-button-icon>
+        <lightning-button-icon variant="border-filled" icon-name="utility:delete" class="slds-p-horizontal_medium" onclick={deleteHandler}
+            title="Delete Contact">
+        </lightning-button-icon>
+        <lightning-button-icon variant="border-filled" icon-name="utility:email" onclick={emailHandler} title="Email Contact">
+        </lightning-button-icon>
+    </div>
+</template>
